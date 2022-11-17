@@ -1,0 +1,56 @@
+.Form__Items {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 290px;
+  padding: 0.4rem 1rem;
+}
+.Form__Items label {
+  color: #444850;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+  font-family: "TelefonicaBold", sans-serif;
+}
+.Form__Items input {
+  color: #65696f;
+  line-height: 1;
+  font-family: "TelefonicaLigth", sans-serif;
+}
+
+.containerInputButton {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.buttonInput {
+  margin: auto !important;
+  margin-bottom: 0 !important;
+}
+
+.inputContainer {
+  padding-right: 2em;
+  font-size: 0.9rem;
+}
+@media (min-width: 450px) {
+  .inputContainer {
+    font-size: 1.1rem;
+  }
+}
+
+.validInputMsg {
+  font-family: 'Telefonica', sans-serif;
+  color:darkgreen;
+}
+
+.textHabeasData {
+  font-family: 'Telefonica', sans-serif;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #86888c;
+  color: #FFF;
+}

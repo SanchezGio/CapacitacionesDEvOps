@@ -1,0 +1,101 @@
+
+.Plans__BgMobile {
+    height: 48%;
+    object-position: top -20px left 0;
+}
+.Plans__BgDesktop {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@media(max-width: 768px) {
+    .Plans__BgMobile {
+        height: 40%;
+        object-position: top 0px left 0;
+    }
+    .Plans__Container {
+        height: 100vw;
+        min-height: 37rem;
+        max-height: 35rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(min-width:768px) {
+    .Plans__BgMobile {
+        display: none;
+    }
+    .Plans__BgDesktop {
+        width: 130%;
+        max-width: unset;
+        display: block;
+        transform: translateX(-50%);
+        object-position: center bottom;
+        left: 50%;
+    }
+    .Plans__Container {
+        height: 15.6rem;
+    }
+    .Bg__White {
+        display: none;
+    }
+}
+.Bg__White {
+    position: absolute;
+    top: 39% !important;
+    z-index: 10;
+}
+.Mask__White {
+    position: absolute;
+    bottom: 0;
+    height: 52%;
+    width: 200%;
+    max-width: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: bottom -60px left 40px;
+    filter: drop-shadow(0px -1px 10px rgba(128, 128, 128, 0.5));
+}
+
+@media(max-width: 768px) {
+    .Mask__White {
+        height: 100%;
+        width: 410%;
+        object-position: bottom 31% left 40px;
+    }
+}
+.Plans__Title {
+    width: 70%;
+    max-width: 300px;
+    transform: translateY(-25%);
+    margin: 80vw auto 0;
+    text-align: center;
+}
+@media(max-width: 768px) {
+    .Plans__Title {
+        width: 100%;
+        max-width: unset;
+        transform: unset;
+        margin: unset;
+        position: relative;
+        height: 60%;
+    }   
+}
+@media(min-width: 768px) {
+    .Plans__Title {
+        transform: translateY(-50%);
+        width: 80%;
+        margin: 7rem 15% 0 auto;
+        max-width: 390px;
+    }
+    .Mask__White {
+        display: none;
+    }
+}

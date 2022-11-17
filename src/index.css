@@ -1,0 +1,115 @@
+:root {
+  --ion-color-primary: #019df4;
+  --ion-color-primary-rgb: 1, 157, 244;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #018ad7;
+  --ion-color-primary-tint: #1aa7f5;
+
+  --ion-color-secondary: #0b2739;
+  --ion-color-secondary-rgb: 11, 39, 57;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0a2232;
+  --ion-color-secondary-tint: #233d4d;
+
+  --ion-color-tertiary: #a13ea1;
+  --ion-color-tertiary-rgb: 161, 62, 161;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #8e378e;
+  --ion-color-tertiary-tint: #aa51aa;
+
+  --ion-color-success: #5cb615;
+  --ion-color-success-rgb: 92, 182, 21;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #51a012;
+  --ion-color-success-tint: #6cbd2c;
+
+  --ion-color-warning: #f28d15;
+  --ion-color-warning-rgb: 242, 141, 21;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #d57c12;
+  --ion-color-warning-tint: #f3982c;
+
+  --ion-color-danger: #e63780;
+  --ion-color-danger-rgb: 230, 55, 128;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #ca3071;
+  --ion-color-danger-tint: #e94b8d;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  /* Color palette BOOTSTRAP */
+  --blue: #019df4 !important;
+  --blue-rgb: 1, 157, 244;
+  --blue-1: #34b1f6 !important;
+  --blueDark: #0b2739 !important;
+  --blueDark-1: #014f7a !important;
+  --blueLight: #67c4f8 !important;
+  --blueLight-1: #99d8fb !important;
+  --blueLight-2: #ccebfd !important;
+  --green: #5cb615 !important;
+  --greenDark: #3c7521 !important;
+  --greenLight: #bde4a4 !important;
+  --purple: #a13ea1 !important;
+  --purpleDark: #642a72 !important;
+  --purpleLight: #debce4 !important;
+  --pink: #e63780 !important;
+  --pinkDark: #922859 !important;
+  --pinkLight: #fbc7de !important;
+  --orange: #ec624b !important;
+  --orangeDark: #983230 !important;
+  --orangeLight: #f8cccc !important;
+  --egg: #f28d15 !important;
+  --eggDark: #9f591f !important;
+  --eggLight: #f8d2b3 !important;
+  --white: #ffffff !important;
+  --grayDark: #313235 !important;
+  --grayDark-1: #50535a !important;
+  --grayDark-2: #86888c !important;
+  --gray: #b6b7b7 !important;
+  --gray-1: #d3d4d3 !important;
+  --gray-2: #f5f5f5 !important;
+  --black: #000000 !important;
+}
+
+@font-face {
+  font-family: 'Telefonica', sans-serif;
+  src: local('Telefonica'), url(./assets/fonts/TelefonicaText-Regular.otf) format('truetype');
+}
+@font-face {
+  font-family: 'TelefonicaLigth';
+  src: local('Telefonica'), url(./assets/fonts/TelefonicaHeadline-Light.otf) format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TelefonicaBold';
+  src: local('TelefonicaBold'), url(./assets/fonts/TelefonicaText-Bold.otf) format('truetype');
+}
+@font-face {
+  font-family: 'TelefonicaItalic';
+  src: local('TelefonicaItalic'), url(./assets/fonts/TelefonicaText-Italic.otf) format('truetype');
+}

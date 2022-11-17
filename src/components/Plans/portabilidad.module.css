@@ -1,0 +1,339 @@
+.new_lineMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_lineMobile_plans {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.new_lineMobile_plan {
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 2px solid #d3d4d3;
+    color: #0b2739;
+    width: 100%;
+    display: inline-block;
+}
+
+.new_lineMobile_plan .description{
+    width: 314px;
+    height: 36px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color:#0b2739;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.17;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_lineMobile_plan .description strong{
+    font-family: 'TelefonicaBold', sans-serif;
+}
+
+.sendSim {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .sendSim {
+        gap: 0.2rem;
+    }
+}
+
+.iconCarSim {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.iconCarSim::before {
+    content: url("../../assets/icons/carritoSim.svg");
+    position: absolute;
+    left: 0;
+}
+
+.greenColor {
+    color:#5cb627;
+}
+
+.new_lineMobile_plan .bonds{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'TelefonicaBold', sans-serif;
+    width: 314px;
+    height: 120px;
+    position: relative;
+}
+
+.new_lineMobile_plan .bonds .bonds_item:nth-child(1){
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    width: 50%;
+    height: 120px;
+    background-color: #5cb615;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.new_lineMobile_plan .bonds .bonds_item:nth-child(1) b,
+.new_lineMobile_plan .bonds .bonds_item:nth-child(2) b{
+    font-size: 40px;
+    font-family: 'TelefonicaBold', sans-serif;
+}
+
+.new_lineMobile_plan .bonds .bonds_item:nth-child(1)::after{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -14px;
+    content: '+';
+    height: 31px;
+    width: 30px;
+    font-size: 35px;
+    font-family: 'TelefonicaBold', sans-serif;
+    background-color: #5cb615;
+    color: #FFFFFF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.new_lineMobile_plan .bonds .bonds_item:nth-child(1) strong,
+.new_lineMobile_plan .bonds .bonds_item:nth-child(2) strong{
+    font-size: 14px;
+}  
+
+.new_lineMobile_plan .bonds .bonds_item:nth-child(2){
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    width: 50%;
+    height: 120px;
+    color: #0b2739;
+    position: relative;
+}
+
+.sizeDatos {
+    transform: translateX(-50%);
+    font-family: 'TelefonicaLigth', sans-serif;
+    left: 50%;
+    top: -12px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sizeDatos::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1px;
+    background-color: #0b2739;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.new_lineMobile_plan .apps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    width: 314px;
+    height: 40px;
+    position: relative;
+}
+
+.new_lineMobile_plan .apps img{
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+.new_lineMobile_plan .minutes,
+.new_lineMobile_plan .flags{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    width: 314px;
+    height: 42px;
+    position: relative;
+}
+
+.new_lineMobile_plan .minutes img {
+    max-height: 1rem;
+    max-width: 1.3rem;
+}
+.new_lineMobile_plan .flags img {
+    max-height: 1rem;
+    max-width: 1.3rem;
+}
+
+.new_lineMobile_plan .bonds::after,
+.new_lineMobile_plan .apps::after,
+.new_lineMobile_plan .minutes::after,
+.new_lineMobile_plan .flags::after{
+    content: '';
+    height: 1px;
+    width: 314px;
+    background-color:#d3d4d3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bold_price {
+    font-family: 'TelefonicaBold', 'sans-serif';
+}
+
+.new_lineMobile_plan .box_price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    width: 314px;
+    height: 60px;
+    font-family: 'Telefonica', sans-serif;
+    text-align: center;
+}
+
+.new_lineMobile_plan .box_price .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 50%;
+}
+
+.new_lineMobile_plan .box_price strong{
+    font-size: 23px;
+    line-height: 1;
+}
+
+.new_lineMobile_plan .box_price .shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 50%;
+    color: #FFFFFF;
+}
+.new_lineMobile_plan .box_price .shop .button{
+    cursor: pointer;
+    width: 146px;
+    height: 42px;
+    padding: 5px;
+    border-radius: 21px;
+    background-color: #0b2739;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_lineMobile_plan:nth-child(5) .description,
+.new_lineMobile_plan:nth-child(6) .description{
+    width: 314px;
+    height: 36px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color:#ec624b;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.17;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px){
+        
+    .new_lineMobile{
+        max-width: 1300px;
+        margin: 0 auto ;
+    }
+
+    .new_lineMobile_plans{
+        height: fit-content;
+        max-width: 730px;
+        width: 100%;
+        margin: 0 auto ;
+        padding: 20px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .new_lineMobile_plan .box_price{
+        display: flex;
+        flex-direction: column;
+        /* width: 328px; */
+        height: 128px;
+    }
+    
+    .new_lineMobile_plan .box_price .price{
+        height: 50px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .new_lineMobile_plan .box_price .shop{
+        height: 55px;
+        width: 100%;
+    }
+
+    .new_lineMobile_plan{
+        display: block;
+        /* width: 318px !important; */
+        margin: 0 auto;
+        width: 100%;
+        max-width: 318px;
+    }
+    
+    .new_lineMobile_plan .description{
+        height: 46px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.17;
+    }
+    
+    .new_lineMobile_plan .bonds{
+        font-size: 12px;
+        height: 120px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .new_lineMobile_plans{
+        max-width: 1020px;
+    }
+}

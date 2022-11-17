@@ -1,0 +1,131 @@
+trigger:
+- none
+
+resources:
+- repo: self
+
+variables:
+  imageRepository: 'referidos' #Imagen
+  tag: '$(Build.BuildId)-referidos' # Tag de compilacion
+  containerRegistry: 'aproddevopsrc.azurecr.io'
+  ProjectKey: 'test-referidos-front' 
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: Docker@2
+      displayName: Build and push an image
+      inputs:
+        containerRegistry: 'aproddevopsrc'
+        repository: $(imageRepository)
+        command: 'buildAndPush'
+        Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        tags: |
+          $(tag)
+    - task: CmdLine@2
+      inputs:
+         script: 'sed -i ''s,aproddevopsrc.azurecr.io/referidos,$(containerRegistry)/$(imageRepository):$(tag),g'' ./manifests/deployment.yml'
+    - task: SonarQubePrepare@5
+      inputs:
+        SonarQube: 'sonar aks'
+        scannerMode: 'CLI'
+        configMode: 'manual'
+        cliProjectKey: $(ProjectKey)
+        cliProjectName: $(ProjectKey)
+        cliSources: '.'
+
+    - task: SonarSource.sonarqube.6D01813A-9589-4B15-8491-8164AEB38055.SonarQubeAnalyze@5
+      displayName: 'Run Code Analysis'
+    - task: SonarQubePublish@5
+      inputs:
+        pollingTimeoutSec: '300'
+  
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)/s/manifests'
+        artifact: 'manifests'
+        publishLocation: 'pipeline'
+
+- stage: Deploy
+  displayName: Deploy stage to prod
+  dependsOn: Build
+  variables:
+    acrsecret: 'k8saproddevopsrcauth'
+  jobs:
+  - deployment: Deploy 
+    displayName: Deploy to AKS
+    environment: 'ReferidosDesa.referidos-whatsapp'
+    pool: 
+      vmImage: ubuntu-latest
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              artifactName: 'manifests'
+              targetPath: '$(Pipeline.Workspace)/manifests'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'createSecret'
+              namespace: 'referidos-whatsapp'
+              secretType: 'dockerRegistry'
+              secretName: $(acrsecret)
+              dockerRegistryEndpoint: 'aproddevopsrc'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'deploy'
+              namespace: 'referidos-whatsapp'
+              manifests: |
+                $(Pipeline.Workspace)/manifests/deployment.yml
+                $(Pipeline.Workspace)/manifests/service.yml
+              imagePullSecrets: |
+                $(acrsecret)
+              containers: |
+                $(containerRegistry)/$(imageRepository):$(tag)
+- stage: Deploytransv
+  displayName: Deploy stage to transv
+  dependsOn: Build
+  variables:
+    acrsecret: 'k8saproddevopsrcauth'
+  jobs:
+  - deployment: Deploy 
+    displayName: Deploy to AKS
+    environment: 'Referidostransversal.ingress-transversal'
+    pool: 
+      vmImage: ubuntu-latest
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              artifactName: 'manifests'
+              targetPath: '$(Pipeline.Workspace)/manifests'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'createSecret'
+              namespace: 'ingress-transversal'
+              secretType: 'dockerRegistry'
+              secretName: $(acrsecret)
+              dockerRegistryEndpoint: 'aproddevopsrc'
+          - task: KubernetesManifest@0
+            inputs:
+              action: 'deploy'
+              namespace: 'ingress-transversal'
+              manifests: |
+                $(Pipeline.Workspace)/manifests/ingress.yml
+                $(Pipeline.Workspace)/manifests/servicetest.yml
+              imagePullSecrets: |
+                $(acrsecret)
+              containers: |
+                $(containerRegistry)/$(imageRepository):$(tag)
+

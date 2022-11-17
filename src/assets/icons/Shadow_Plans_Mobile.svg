@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="72" viewBox="0 0 360 72">
+    <defs>
+        <linearGradient id="ci7rovysra" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fbfaef" stop-opacity="0"/>
+            <stop offset=".498" stop-color="#f2f0e0"/>
+            <stop offset=".64" stop-color="#f0eedd"/>
+            <stop offset="1" stop-color="#fbfaef" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <path data-name="Rectangle 2285" style="fill:url(#ci7rovysra)" d="M0 0h360v72H0z"/>
+</svg>

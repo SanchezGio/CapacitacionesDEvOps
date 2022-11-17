@@ -1,0 +1,74 @@
+@media(max-width: 768px) {
+  .paper {
+    width: 318px !important;
+    height: 612px !important;
+  }
+}
+
+.paper {
+  position: absolute;
+  width: 552px;
+  height: 426px;
+  background-color: white;
+  box-shadow: 10px;
+  outline: none;
+  border-radius: 8px;
+}
+
+.imgClose{
+  width: 36px;
+  height: 36px;
+}
+
+.modalStyle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttonClose {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-right: 22px;
+}
+
+.containerButton {
+  text-align: center;
+}
+
+.buttonExit {
+  background-color: #019df4 !important;
+  width: 10rem;
+  height: 2.8rem;
+  border-radius: 5rem !important;
+  color: #fff;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.scrollModal::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scrollModal::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.scrollModal::-webkit-scrollbar-button:increment,
+.scrollModal::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scrollModal::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.scrollModal::-webkit-scrollbar-thumb {
+  background-color: #019df4;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.scrollModal::-webkit-scrollbar-track {
+  border-radius: 10px;
+}

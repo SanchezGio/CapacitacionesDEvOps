@@ -1,0 +1,34 @@
+@media(min-width: 768px) {
+    .navbar-brand {
+        width: fit-content;
+        padding: 0;
+        margin: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        text-align: center;
+    }
+    .navbar {
+        height: 3.4rem;
+        text-align: center;
+        overflow: visible;
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar-bottom {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        align-items: center;
+        z-index: 2 !important;
+        justify-content: space-around;
+      }
+
+      .navbar-brand {
+        width: fit-content;
+        padding: 0;
+        margin: auto;
+    }
+}

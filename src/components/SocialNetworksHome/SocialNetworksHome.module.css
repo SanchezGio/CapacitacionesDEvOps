@@ -1,0 +1,42 @@
+.SocialNetworks__Icons img {
+    width: 2.6rem;
+    height: 2.6rem;
+    max-width: unset;
+}
+.SocialNetworks__TextGift {
+    font-family: 'TelefonicaBold', sans-serif;
+    color: #0b2739;
+}
+.SocialNetworks__BigText {
+    font-size: 3rem;
+    font-family: 'TelefonicaBold', sans-serif;
+    color: #019df4;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.SocialNetworks__SmallText {
+    font-size: .8rem;
+    color: #0b2739;
+}
+@media (min-width: 1024px) {
+    .SocialNetworks__TextGift {
+        font-size: 1.9rem;
+    }
+    .SocialNetworks__Icons img {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+    .SocialNetworks {
+        margin-left: 0;
+        margin-top: -2rem;
+        flex: 0 0 36%;
+    }
+    .SocialNetworks__SmallText {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+    .SocialNetworks__BigText {
+        font-size: 5.6rem;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="143" height="49.404" viewBox="0 0 143 49.404">
+    <g data-name="Group 662" transform="translate(0 1)">
+        <g data-name="Rectangle 240" transform="translate(91 32.404)" style="stroke:#0b2739;fill:#0b2739">
+            <rect width="52" height="5" rx="2.5" style="stroke:none"/>
+            <rect x=".5" y=".5" width="51" height="4" rx="2" style="fill:none"/>
+        </g>
+        <g data-name="Rectangle 241" transform="rotate(180 26 18.702)" style="stroke:#0b2739;fill:#0b2739">
+            <rect width="52" height="5" rx="2.5" style="stroke:none"/>
+            <rect x=".5" y=".5" width="51" height="4" rx="2" style="fill:none"/>
+        </g>
+        <g data-name="Group 666">
+            <path data-name="Path 834" d="M0 0v14" transform="translate(71.646)" style="stroke:#707070;stroke-linecap:round;stroke-width:2px;fill:none"/>
+            <g data-name="Group 669">
+                <path data-name="Line 50" transform="translate(78.939 4.904)" style="stroke:#707070;stroke-linecap:round;stroke-width:2px;fill:none" d="M4.414 0 0 10.096"/>
+                <path data-name="Line 51" style="stroke:#707070;stroke-linecap:round;stroke-width:2px;fill:none" d="m0 0 4.414 10.096" transform="translate(59.939 4.904)"/>
+            </g>
+        </g>
+        <g data-name="Group 667" transform="translate(70.939 28.404)">
+            <rect width="16" height="3" rx="1.5" transform="translate(.061)" style="fill:#0b2739"/>
+            <rect data-name="Rectangle" width="16.429" height="3" rx="1.5" transform="translate(0 10.5)" style="fill:#0b2739"/>
+        </g>
+        <path data-name="Rectangle Copy 49" d="M12.5 0h.5v25h-.5A12.5 12.5 0 0 1 0 12.5 12.5 12.5 0 0 1 12.5 0z" transform="rotate(180 47.142 23.702)" style="fill:#b6b7b7"/>
+        <path data-name="Rectangle Copy 49" d="M12.5 0h.5v25h-.5A12.5 12.5 0 0 1 0 12.5 12.5 12.5 0 0 1 12.5 0z" transform="translate(48.596 22.404)" style="fill:#b6b7b7"/>
+        <path data-name="Rectangle Copy 53" d="M0 0a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4V0z" transform="translate(93 29.404)" style="fill:#86888c"/>
+        <path data-name="Rectangle Copy 53" d="M0 0a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4V0z" transform="rotate(180 25 20.202)" style="fill:#86888c"/>
+        <rect data-name="Rectangle Copy 51" width="3" height="27" rx="1.5" transform="rotate(180 41 24.202)" style="fill:#b6b7b7"/>
+        <rect data-name="Rectangle Copy 51" width="3" height="27" rx="1.5" transform="translate(61 21.404)" style="fill:#b6b7b7"/>
+    </g>
+</svg>

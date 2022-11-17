@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: referidos
+  namespace: referidos-whatsapp
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  tls:
+    - hosts:
+        - referidos-whatsapp-prod.telefonicawebsites.co
+      secretName: tls-telefonicawebsites-co
+  rules:
+    - host: referidos-whatsapp-prod.telefonicawebsites.co
+      http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: referidosfront
+                port:
+                  number: 3000

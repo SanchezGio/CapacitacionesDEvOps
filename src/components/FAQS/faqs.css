@@ -1,0 +1,66 @@
+.container-faqs {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+@media(min-width:768px) {
+  .container-faqs {
+    width: 70%;
+  }
+}
+
+.container-title {
+  text-align: center;
+}
+
+.title-faqs {
+  font-size: 1.3rem;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+}
+
+.answer {
+  text-align: left;
+}
+
+.margin-faqs {
+  margin-bottom: 24px;
+}
+
+.container-answer {
+  width: 100%;
+  text-align: left;
+}
+
+.container-answer ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+@media(min-width:768px) {
+  .container-answer ul {
+    padding-left: 3rem;
+  }
+}
+
+.container-faqs li::marker {
+  color: #019df4 !important;
+}
+
+.container-faqs li {
+  color: #4d4d4d !important ;
+}
+
+.container-faqs .MuiTypography-body1 {
+    font-family: 'Telefonica', sans-serif !important;
+    color: #4d4d4d !important;
+}
+
+.container-faqs .MuiPaper-rounded {
+  padding: 8px 16px !important;
+}

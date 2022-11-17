@@ -1,0 +1,64 @@
+.SocialNetworks__Icons img {
+  width: 2.6rem;
+  height: 2.6rem;
+  max-width: unset;
+}
+.SocialNetworks__TextGift {
+  font-family: "TelefonicaBold", sans-serif;
+  color: #0b2739;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+.SocialNetworks__TextGift span{
+  font-family: "TelefonicaLigth", sans-serif;
+  color: #0b2739;
+}
+.SocialNetworks__BigText {
+  font-size: 3rem;
+  font-family: "TelefonicaBold", sans-serif;
+  color: #019df4;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.SocialNetworks__SmallText {
+  font-size: 0.8rem;
+  color: #0b2739;
+}
+@media only screen and (min-width:556px) and (max-width:767px) {
+  .SocialNetworks {
+    margin-top: -4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .SocialNetworks__TextGift {
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .SocialNetworks__TextGift span {
+    font-family: "TelefonicaLigth", sans-serif;
+  }
+  .SocialNetworks__Icons img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .SocialNetworks__SmallText {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .SocialNetworks__BigText {
+    text-transform: uppercase;
+    width: 7.2rem;
+    font-size: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+  }
+  .SocialNetworks__BigText span {
+    color: #0b2739;
+    font-size: 2.1rem;
+  }
+}
