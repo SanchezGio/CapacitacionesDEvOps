@@ -83,7 +83,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
+    kubernetes.io/ingress.class: nginx
   name: capacitacion-devops
   namespace: default
 spec:
@@ -93,7 +93,7 @@ spec:
       port:
         number: 8080
   rules:
-  - host: capacitacion-devops.telefonicawebsites.co
+  - host: proeyecto1.labdevops.nh.inet
     http:
       paths:
       - backend:
@@ -105,8 +105,8 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - capacitacion-devops.telefonicawebsites.co
-    secretName: telefonicawebsites
+    - proeyecto1.labdevops.nh.inet
+    secretName: certdevops
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -115,4 +115,5 @@ metadata:
   namespace: default
 data:
   VARIABLE: CONTENIDO
+
 
