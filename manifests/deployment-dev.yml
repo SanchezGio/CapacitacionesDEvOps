@@ -17,10 +17,10 @@ spec:
     spec:
       containers:
         - name: capacitacion-devops
-          image: aproddevopsrc.azurecr.io/capacitacion-devops:0.1
+          image: imagekeyword
           ports:
             - name: 80tcp01
-              containerPort: 80
+              containerPort: 443
               protocol: TCP
           env:
             - name: TZ
@@ -115,12 +115,4 @@ metadata:
   namespace: default
 data:
   VARIABLE: CONTENIDO
-  
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: capacitacion-devops
-  namespace: default
-data:
-  VARIABLE: CONTENDIDO EN BASE64
+
